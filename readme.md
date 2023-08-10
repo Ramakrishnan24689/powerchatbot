@@ -28,7 +28,7 @@ The Power Chatbot renders the Item collection provided via **Items** property an
 
 #### Step 1 - Setup custom connector
 
-[ Setup custom connector](code/Setup-customconnector.md)
+[ Setup custom connector](/Setup-customconnector.md)
 
 #### Step 2 - Configure control
 
