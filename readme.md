@@ -105,4 +105,4 @@ Power Chatbot uses [Fluent UI React v9](https://react.fluentui.dev/) framework a
 
 ## 🛣️ Future roadmap
 
-- UI improvements to close to perfection. Expecially from accessibility stand point.
+- UI improvements close to perfection. Especially from accessibility stand point.
