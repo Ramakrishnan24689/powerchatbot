@@ -100,8 +100,13 @@ To enable this feature, see [Enable modern controls and themes for your app](htt
 
 Power Chatbot uses [Fluent UI React v9](https://react.fluentui.dev/) framework along with [Team's React Chat Package](https://github.com/microsoft/fluentui-contrib/tree/main/packages/react-chat) to bring the chat experience close to Microsoft Teams.
 
-![Theme](media/Seamlessexp.jpg)
+![Seamless experience](media/Seamlessexp.png)
 
+## 🔩 Configurability for better control
+
+Power Chatbot comes with different configurable options to choose from inroder to change the user experience.
+
+![Configurability](media/Configurable.png)
 
 ## 🛣️ Future roadmap
 
