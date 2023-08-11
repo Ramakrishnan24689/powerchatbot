@@ -18,7 +18,7 @@ Power Chatbot component solely rely on Custom connector, as it does most of heav
 
 ## 👨🏻‍💻 Setup & 🪛 Configuration
 
-Setup and configuration required three steps mentioned below.
+Setup and configuration requires below mentioned steps.
 
 #### Step 1 - Setup custom connector
 
@@ -118,3 +118,4 @@ Power Chatbot comes with different configurable options to choose from inroder t
 ## 🛣️ Future roadmap
 
 - UI improvements close to perfection. Especially from accessibility stand point.
+- Explore the possibilities with Azure Open AI API and guidance.
