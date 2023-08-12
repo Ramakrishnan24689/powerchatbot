@@ -111,7 +111,7 @@ Power Chatbot uses [Fluent UI React v9](https://react.fluentui.dev/) framework a
 
 ## 🔩 Configurability for better control
 
-Power Chatbot comes with different configurable options to choose from inroder to change the user experience.
+Power Chatbot comes with different configurable options to choose from inorder to change the user experience.
 
 ![Configurability](media/Configurable.png)
 

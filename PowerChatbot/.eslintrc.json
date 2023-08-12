@@ -5,7 +5,8 @@
     },
     "extends": [
       "eslint:recommended",
-      "plugin:react/recommended"
+      "plugin:react/recommended",
+      "plugin:@typescript-eslint/recommended"
     ],
     "globals": {
       "ComponentFramework": true
@@ -17,10 +18,19 @@
     },
     "plugins": [
       "@microsoft/power-apps",
-      "@typescript-eslint"
+      "@typescript-eslint",
+      "react-hooks",
+      "prettier"
     ],
     "rules": {
-      "no-unused-vars": "off"
+      "eqeqeq": [2, "smart"],
+      "arrow-body-style": "off",
+      "react-hooks/exhaustive-deps": "warn",
+      "no-unused-vars": "off",
+      "semi": [
+        "error",
+        "always"
+    ]
     },
     "settings": {
       "react": {

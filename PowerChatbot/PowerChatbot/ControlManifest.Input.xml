@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
-  <control namespace="CustomControl" constructor="PowerChatbot" version="1.0.0" display-name-key="PowerChatbotPCF_key" description-key="PowerChatbotPCF_desc" control-type="virtual">
+  <control namespace="CustomControl" constructor="PowerChatbot" version="1.0.1" display-name-key="PowerChatbotPCF_key" description-key="PowerChatbotPCF_desc" control-type="virtual">
     <property name="SubmittedText" display-name-key="PowerChatbot_SubmittedText_Key" description-key="PowerChatbot_SubmittedText_Desc_Key" of-type="SingleLine.Text" usage="output" required="true" />
     <property name="BotName" display-name-key="PowerChatbot_BotName_Key" description-key="PowerChatbot_BotName_Desc_Key" of-type="SingleLine.Text" usage="input" default-value="Assistance" required="false" />
     <property name="LoadingText" display-name-key="PowerChatbot_LoadingText_Key" description-key="PowerChatbot_LoadingText_Desc_Key" of-type="SingleLine.Text" usage="input" default-value="Working on it..." required="false" />
@@ -9,12 +9,14 @@
     <data-set name="Items" display-name-key="PowerChatbot_Items_Display_Key" description-key="PowerChatbot_Items_Desc_Key" allow-default-selected-items="true" resettable="true"/>
     <property name="Useplatformtheme" display-name-key="PowerChatbot_Useplatformtheme_Display_Key" description-key="PowerChatbot_Useplatformtheme_Desc_Key" of-type="TwoOptions" default-value="false" usage="input" required="false"/>
     <property name="ShowIcon" display-name-key="PowerChatbot_ShowIcon_Display_Key" description-key="PowerChatbot_ShowIcon_Desc_Key" of-type="TwoOptions" default-value="false" usage="input" required="false"/>
+    <property name="DarkMode" display-name-key="PowerChatbot_DarkMode_Display_Key" description-key="PowerChatbot_DarkMode_Desc_Key" of-type="TwoOptions" default-value="false" usage="input" required="false"/>
     <common-property name="Height" default-value="675" />
     <common-property name="Width" default-value="320" />
     <event name="OnSubmit"/>
     <resources>
       <code path="index.ts" order="1"/>
       <platform-library name="React" version="16.8.6" />
+      <platform-library name="Fluent" version="9.4.0"/>
       <resx path="strings/PowerChatbot.1033.resx" version="1.0.0"/>
     </resources>
   </control>

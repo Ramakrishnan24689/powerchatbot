@@ -118,7 +118,7 @@
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
     <data name="PowerChatbotPCF_key" xml:space="preserve">
-        <value>Power Chatbot (1.0.0)</value>
+        <value>Power Chatbot (1.0.1)</value>
     </data>
     <data name="PowerChatbotPCF_desc_Key" xml:space="preserve">
         <value>A chatbot which provides seamless and truly conversational bot powered by Open AI</value>
@@ -158,5 +158,8 @@
     </data>
     <data name="PowerChatbot_ShowIcon_Display_Key" xml:space="preserve">
         <value>Show icon</value>
+    </data>
+    <data name="PowerChatbot_DarkMode_Display_Key" xml:space="preserve">
+        <value>Dark mode</value>
     </data>
 </root>
