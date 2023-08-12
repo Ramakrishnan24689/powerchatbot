@@ -54,18 +54,18 @@ export class PowerChatbot implements ComponentFramework.ReactControl<IInputs, IO
         }
         this.eventtobeTriggered && this.triggerOnSubmit();
         const chatComponentProps = {
-                                        items:this.items,
-                                        botName: botName,
-                                        showIcon: showIcon,
-                                        placeholdertext:placeholdertext,
-                                        allocatedWidth: allocatedWidth,
-                                        allocatedHeight: allocatedHeight,
-                                        loadingText: loadingText,
-                                        accessibleLabel: accessibleLabel,
-                                        onSubmit:this._onSubmit,
-                                        disabledState: this.disableChatComponent(records, sortedRecordIds),
-                                        usePlatformtheme: usePlatformtheme
-                                    } as IChatInputProps;
+            items: this.items,
+            botName: botName,
+            showIcon: showIcon,
+            placeholdertext: placeholdertext,
+            allocatedWidth: allocatedWidth,
+            allocatedHeight: allocatedHeight,
+            loadingText: loadingText,
+            accessibleLabel: accessibleLabel,
+            onSubmit: this._onSubmit,
+            disabledState: this.disableChatComponent(records, sortedRecordIds),
+            usePlatformtheme: usePlatformtheme
+        } as IChatInputProps;
         return React.createElement(
             ChatComponent, chatComponentProps
         );
@@ -84,10 +84,10 @@ export class PowerChatbot implements ComponentFramework.ReactControl<IInputs, IO
         this.notifyOutputChanged();
     }
 
-    private disableChatComponent(records: RecordSet, sortedRecordIds: string[]): Boolean {
+    private disableChatComponent(records: RecordSet, sortedRecordIds: string[]): boolean {
         if (sortedRecordIds.length > 0) {
             // false - if last record is from Open AI - 'assistance'
-           return records[sortedRecordIds[sortedRecordIds.length-1]].getFormattedValue('role') === 'user'
+            return records[sortedRecordIds[sortedRecordIds.length - 1]].getFormattedValue('role') === 'user';
         }
         return false;
     }
@@ -101,7 +101,7 @@ export class PowerChatbot implements ComponentFramework.ReactControl<IInputs, IO
         let rolecolumnAlias = columns[1] && columns[1].alias;
         // if no column is specified and the first record has a value column, use that.
         if (!contentcolumnAlias && records[sortedRecordIds[0]].getFormattedValue('content') !== null &&
-        !contentcolumnAlias && records[sortedRecordIds[0]].getFormattedValue('role') !== null) {
+            !contentcolumnAlias && records[sortedRecordIds[0]].getFormattedValue('role') !== null) {
             contentcolumnAlias = 'content';
             rolecolumnAlias = 'role';
         }

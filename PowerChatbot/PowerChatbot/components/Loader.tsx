@@ -20,14 +20,14 @@ const useStyles = makeStyles({
 	},
 });
 
-export const Loader = (props:ILoaderProps) => {
-  const styles = useStyles();
-  return (<div className={styles.root}>
-    <Card className={styles.cardStyle}>
-      <div className={styles.cardInnerStyle} aria-live="polite">
-        <Label weight="semibold">{props.loadingText}</Label>
-      </div>
-      <ProgressBar />
-    </Card>
-  </div>)
+export const Loader = (props: ILoaderProps) => {
+	const styles = useStyles();
+	return (<div className={styles.root}>
+		<Card className={styles.cardStyle}>
+			<div className={styles.cardInnerStyle} aria-live="polite">
+				<Label weight="semibold">{props.loadingText}</Label>
+			</div>
+			<ProgressBar />
+		</Card>
+	</div>);
 };
