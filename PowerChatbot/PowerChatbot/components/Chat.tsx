@@ -15,7 +15,7 @@ import { IChatInputProps, IChatMessage } from "../interface/IChatProps";
 import { Loader } from "./Loader";
 import { ChatGPTIcon, WelcomeIcon } from "./OpenAIIcon";
 import { WelcomeIconInfo } from "../ManifestConstants";
-import { powerappsTheme, powerappsdarkTheme } from "./Theme";
+import { powerappsTheme, powerappsdarkTheme } from "./theme";
 
 const useStyles = makeStyles({
   root: {
@@ -26,7 +26,6 @@ const useStyles = makeStyles({
   },
   textareaStyle: {
     ...shorthands.borderStyle("none"),
-
   },
 });
 
@@ -94,13 +93,12 @@ export const ChatComponent = React.memo((props: IChatInputProps) => {
   // Adding style directly instead of Griffel based to support test harness activity
   const chatbotComponent =
     <div style={rootStyles.outerDiv}>
-      {chatMessages.length < 1 ? <WelcomeIcon color={brandForeground2} width={(allocatedWidth * 0.7).toString()} height={(allocatedHeight * 0.7 - WelcomeIconInfo.padding).toString()} /> :
+      {chatMessages.length < 1 ? <div style={rootStyles.chat}><WelcomeIcon color={brandForeground2} width={(allocatedWidth * 0.7).toString()} height={(allocatedHeight * 0.7 - WelcomeIconInfo.padding).toString()} /></div> :
         <Chat ref={messagesEndRef} style={rootStyles.chat}>
           {chatMessages}
         </Chat>}
       <br />
-      {disabledState && <Loader loadingText={loadingText} />}
-      <br />
+      {disabledState && <><Loader loadingText={loadingText} /><br /></>}
       <div className={styles.root}>
         <Card style={rootStyles.card} tabIndex={-1}>
           <Textarea
