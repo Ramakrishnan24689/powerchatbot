@@ -81,18 +81,18 @@ export const ChatComponent = React.memo((props: IChatInputProps) => {
       chat: {
         overflowY: 'auto',
         maxHeight: allocatedHeight * 0.7,
-        height: allocatedHeight * 0.7,
+        height: disabledState ? allocatedHeight * 0.7 - 65 : allocatedHeight * 0.7, // -65 to accomodate loader component height
       } as React.CSSProperties,
       card: {
         height: 135, //fixed height
       } as React.CSSProperties,
       textArea: { border: "none" } as React.CSSProperties,
     };
-  }, [allocatedHeight, allocatedWidth]);
+  }, [allocatedHeight, allocatedWidth, disabledState]);
 
   // Adding style directly instead of Griffel based to support test harness activity
   const chatbotComponent =
-    <div style={rootStyles.outerDiv}>
+    <div style={rootStyles.outerDiv} aria-label={accessibleLabel}>
       {chatMessages.length < 1 ? <div style={rootStyles.chat}><WelcomeIcon color={brandForeground2} width={(allocatedWidth * 0.7).toString()} height={(allocatedHeight * 0.7 - WelcomeIconInfo.padding).toString()} /></div> :
         <Chat ref={messagesEndRef} style={rootStyles.chat}>
           {chatMessages}
@@ -100,11 +100,10 @@ export const ChatComponent = React.memo((props: IChatInputProps) => {
       <br />
       {disabledState && <><Loader loadingText={loadingText} /><br /></>}
       <div className={styles.root}>
-        <Card style={rootStyles.card} tabIndex={-1}>
+        <Card style={rootStyles.card}>
           <Textarea
-            autoFocus={true}
+            autoFocus={!disabledState}
             className={styles.textareaStyle}
-            aria-label={accessibleLabel}
             placeholder={placeholdertext}
             ref={textElement}
             value={sendBoxValue}
