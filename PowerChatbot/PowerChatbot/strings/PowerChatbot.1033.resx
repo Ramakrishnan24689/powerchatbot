@@ -159,7 +159,7 @@
     <data name="PowerChatbot_ShowIcon_Display_Key" xml:space="preserve">
         <value>Show icon</value>
     </data>
-    <data name="PowerChatbot_ShowIcon_DarkMode_Key" xml:space="preserve">
+    <data name="PowerChatbot_DarkMode_Display_Key" xml:space="preserve">
         <value>Dark mode</value>
     </data>
 </root>
