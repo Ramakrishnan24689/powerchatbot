@@ -10,6 +10,7 @@ export interface IChatInputProps {
     onSubmit: (value: string) => void;
     usePlatformtheme: boolean;
     disabledState: boolean;
+    darkMode: boolean;
 }
 
 export interface IChatMessage {

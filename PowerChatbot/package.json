@@ -11,9 +11,6 @@
     "start": "pcf-scripts start",
     "refreshTypes": "pcf-scripts refreshTypes"
   },
-  "browser": {
-    "fs": false
-  },
   "dependencies": {
     "@fluentui-contrib/react-chat": "^0.1.6",
     "@fluentui/react-components": "^9.27.4",

@@ -1,6 +1,6 @@
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
-import { ChatComponent } from "./components/Chat";
 import * as React from "react";
+import { ChatComponent } from "./components/Chat";
 import { ManifestPropertyNames } from "./ManifestConstants";
 import { Column, RecordSet } from "./components/Component.types";
 import { IChatInputProps, IChatMessage } from "./interface/IChatProps";
@@ -47,6 +47,7 @@ export class PowerChatbot implements ComponentFramework.ReactControl<IInputs, IO
         const loadingText = context.parameters.LoadingText.raw ?? '';
         const placeholdertext = context.parameters.PlaceholderText.raw ?? '';
         const usePlatformtheme = context.parameters.Useplatformtheme.raw;
+        const darkMode = context.parameters.DarkMode.raw;
         const allocatedWidth = parseInt(context.mode.allocatedWidth as unknown as string);
         const allocatedHeight = parseInt(context.mode.allocatedHeight as unknown as string);
         if (datasetChanged) {
@@ -56,6 +57,7 @@ export class PowerChatbot implements ComponentFramework.ReactControl<IInputs, IO
         const chatComponentProps = {
             items: this.items,
             botName: botName,
+            darkMode: darkMode,
             showIcon: showIcon,
             placeholdertext: placeholdertext,
             allocatedWidth: allocatedWidth,
@@ -73,7 +75,6 @@ export class PowerChatbot implements ComponentFramework.ReactControl<IInputs, IO
 
     private triggerOnSubmit() {
         this.eventtobeTriggered = false;
-        console.log("OnSubmit");
         this.submittedText = "";
         this.context.events.OnSubmit();
     }
@@ -87,6 +88,7 @@ export class PowerChatbot implements ComponentFramework.ReactControl<IInputs, IO
     private disableChatComponent(records: RecordSet, sortedRecordIds: string[]): boolean {
         if (sortedRecordIds.length > 0) {
             // false - if last record is from Open AI - 'assistance'
+            // this acts as promise for the component
             return records[sortedRecordIds[sortedRecordIds.length - 1]].getFormattedValue('role') === 'user';
         }
         return false;

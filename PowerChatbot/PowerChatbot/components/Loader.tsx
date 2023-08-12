@@ -6,7 +6,7 @@ import { ILoaderProps } from "../interface/IChatProps";
 const useStyles = makeStyles({
 	root: {
 		display: "relative",
-		...shorthands.padding("12px"),
+		...shorthands.padding("8px"),
 		paddingTop: "1px",
 		paddingBottom: "2px",
 	},
