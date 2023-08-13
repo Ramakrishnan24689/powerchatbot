@@ -10,7 +10,7 @@ Glimpse of PowerChatbot configured inside Model driven app using custom page.
 
 ![Glimpse](media/Glimpse.gif)
 
-## 🤖 How it works
+## 📘 How it works
 
 Power Chatbot component solely rely on Custom connector, as it does most of heavy lifting, i.e. to interact with OpenAI API and bring back results.
 

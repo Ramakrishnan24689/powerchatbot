@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
-  <control namespace="CustomControl" constructor="PowerChatbot" version="1.0.1" display-name-key="PowerChatbotPCF_key" description-key="PowerChatbotPCF_desc" control-type="virtual">
+  <control namespace="CustomControl" constructor="PowerChatbot" version="1.0.2" display-name-key="PowerChatbotPCF_key" description-key="PowerChatbotPCF_desc" control-type="virtual">
     <property name="SubmittedText" display-name-key="PowerChatbot_SubmittedText_Key" description-key="PowerChatbot_SubmittedText_Desc_Key" of-type="SingleLine.Text" usage="output" required="true" />
     <property name="BotName" display-name-key="PowerChatbot_BotName_Key" description-key="PowerChatbot_BotName_Desc_Key" of-type="SingleLine.Text" usage="input" default-value="Assistance" required="false" />
     <property name="LoadingText" display-name-key="PowerChatbot_LoadingText_Key" description-key="PowerChatbot_LoadingText_Desc_Key" of-type="SingleLine.Text" usage="input" default-value="Working on it..." required="false" />

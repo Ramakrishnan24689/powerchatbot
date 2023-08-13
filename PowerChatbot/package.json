@@ -15,7 +15,8 @@
     "@fluentui-contrib/react-chat": "^0.1.6",
     "@fluentui/react-components": "^9.27.4",
     "react": "16.8.6",
-    "react-dom": "16.8.6"
+    "react-dom": "16.8.6",
+    "react-markdown": "^8.0.7"
   },
   "devDependencies": {
     "@fluentui/react-icons": "^2.0.210",
