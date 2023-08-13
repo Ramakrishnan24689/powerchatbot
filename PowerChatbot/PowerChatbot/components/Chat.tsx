@@ -16,6 +16,7 @@ import { Loader } from "./Loader";
 import { ChatGPTIcon, WelcomeIcon } from "./OpenAIIcon";
 import { WelcomeIconInfo } from "../ManifestConstants";
 import { powerappsTheme, powerappsdarkTheme } from "./theme";
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
 const useStyles = makeStyles({
   root: {
@@ -26,7 +27,7 @@ const useStyles = makeStyles({
   },
   textareaStyle: {
     ...shorthands.borderStyle("none"),
-  },
+  }
 });
 
 export const ChatComponent = React.memo((props: IChatInputProps) => {
@@ -63,8 +64,8 @@ export const ChatComponent = React.memo((props: IChatInputProps) => {
   const chatMessages = React.useMemo(() => {
     // Reset submit state on every item collection change
     return items.map((i: IChatMessage) => {
-      return i.role === "assistant" ? <ChatMessage avatar={showIcon ? <Avatar color={"brand"} icon={<Bot24Regular />} /> : <ChatGPTIcon color={brandForeground1} />}>{i.content}</ChatMessage> :
-        <ChatMyMessage>{i.content}</ChatMyMessage>;
+      return i.role === "assistant" ? <ChatMessage avatar={showIcon ? <Avatar color={"brand"} icon={<Bot24Regular />} /> : <ChatGPTIcon color={brandForeground1} />}><ReactMarkdown>{i.content}</ReactMarkdown></ChatMessage> :
+        <ChatMyMessage><ReactMarkdown>{i.content}</ReactMarkdown></ChatMyMessage>;
     });
   }, [items, brandForeground1, showIcon]);
 
